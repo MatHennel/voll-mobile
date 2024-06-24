@@ -1,8 +1,14 @@
-import Principal from "@/src/Principal";
+import Login from "@/src/Login";
 import { Text, View } from "react-native";
+import {NativeBaseProvider, StatusBar} from 'native-base'
+import { TEMAS } from "@/src/estilos/Temas";
 
 export default function Index() {
   return (
-    <Principal/>
+    <NativeBaseProvider>
+      <StatusBar backgroundColor={TEMAS.colors.blue[800]}/>
+      <Login/>
+    </NativeBaseProvider>
+    
   );
 }
