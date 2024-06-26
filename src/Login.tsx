@@ -2,6 +2,8 @@ import { VStack,Image, Text, Box, FormControl, Input, Button, Link} from 'native
 import { TouchableOpacity } from 'react-native';
 import Logo from './assets/Logo.png'
 import { Titulo } from './componentes/Titulo';
+import { EntradaTexto } from './componentes/EntradaTexto';
+import { Botao } from './componentes/Botao';
 
 export default function Login() {
   return (
@@ -13,37 +15,19 @@ export default function Login() {
    </Titulo>
 
    <Box>
-    <FormControl mt={3}>
-      <FormControl.Label>Email</FormControl.Label>
-      <Input
-        placeholder='Insira seu endereço de email'
-        size={'lg'}
-        w={"100%"}
-        borderRadius={'lg'}
-        bgColor={'gray.100'}
-        shadow={3}
-      />
-    </FormControl>
-    <FormControl mt={3}>
-      <FormControl.Label>Senha</FormControl.Label>
-      <Input
-        placeholder='Insira sua senha'
-        size={'lg'}
-        w={"100%"}
-        borderRadius={'lg'}
-        bgColor={'gray.100'}
-        shadow={3}
-      />
-    </FormControl>
+    <EntradaTexto 
+      label='Email'
+      placeholder='Insira seu endereço de e-mail'
+    />
+
+    <EntradaTexto
+      label='Senha'
+      placeholder='Insirua sua senha'
+    />
+     
    </Box>
-    <Button
-      w={'100%'}
-      bg={'blue.800'}
-      mt={10}
-      borderRadius={'lg'}
-    >
-      Entrar
-    </Button>
+      <Botao>Entrar</Botao>
+    
 
     <Link mt={2}>
       Esqueceu sua senha?
